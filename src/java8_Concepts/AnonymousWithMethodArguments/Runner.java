@@ -26,8 +26,6 @@ public static void main(String args[])
 		}
 		
 	};
-
-	
 	parent.sum(2, 5);
 	Runner runner=new Runner();
 	runner.divide();
