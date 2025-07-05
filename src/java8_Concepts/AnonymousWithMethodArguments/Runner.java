@@ -31,7 +31,5 @@ public static void main(String args[])
 	runner.divide();
 	runner.multiply();
 	
-	
-	
 }
 }
