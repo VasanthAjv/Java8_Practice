@@ -25,6 +25,8 @@ public static void main(String []args)
 	dishList.add(new Dish("Mango Lassi", true, Type.DRINK, 180));
 	dishList.add(new Dish("Chicken Kabab", false, Type.SNACK, 400));
 	usingJava8();
+	String str= isVege();
+	System.out.println(str);
 	
 }
 
@@ -51,6 +53,12 @@ public static void lowTohighAndIsVegeterian() {
 	}
 }
 
+public static String isVege() {
+	return dishList.stream()
+	.filter(Dish::isVegetarian)
+	.sorted(Comparator.comparing(Dish::getPrice).reversed()).map(n->n.getDishName()).collect(Collectors.joining("||"));
+	
+}
 
 public static void usingJava8() {
 	List<String> usingjava=dishList.stream().filter(n->n.isVegetarian()==false)
