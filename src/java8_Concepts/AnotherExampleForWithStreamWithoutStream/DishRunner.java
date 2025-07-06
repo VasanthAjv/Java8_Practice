@@ -67,4 +67,7 @@ public static void usingJava8() {
 	.collect(Collectors.toList());
 	System.out.println(usingjava);
 }
+
+
+
 }
